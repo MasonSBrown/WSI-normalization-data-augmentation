@@ -13,8 +13,13 @@ from time import sleep
 #if you would like to run this code you should change the path ***
 slide = open_slide("/Users/Mason/github/MasonSBrown/WSI-normalization-data-augmentation/rawimages/MIDOG2022IMG1")
 
-slide_props = slide.properties
-print(slide_props)
+# #Quick Thumbnail of slides
+# thumbnail = slide.get_thumbnail((slide.dimensions[0] // 256, slide.dimensions[1] // 256))
+# thumbnail.show()
+
+# #Get the properties of the slide
+# slide_props = slide.properties
+# print(slide_props)
 
 from normalizingslides import norm_HnE
 
@@ -28,7 +33,7 @@ smaller_region_np = np.array(smaller_region_KGB)
 plt.axis('off')
 plt.imshow(smaller_region_np)
 # plt.show() 
-# ^ prints image if you want to
+# ^ prints image of tile if you want to :)
 
 
 
@@ -54,12 +59,12 @@ plt.title('E image')
 plt.imshow(E_img)
 plt.show()
 
-# blank = tiff.imread("insertpathhere!!!")
+# blank = tiff.imread("TODOinsertblankpathhere!!!")
 # norm_img, H_img, E_img = norm_HnE(blank, Io=240, alpha=1, beta=0.15)
 
 # #Function to detect blank tiles and tiles with very minimal information
 # #This function can be used to identify these tiles so we can make a decision on what to do with them. 
-# #Here, the function calculates mean and std dev of pixel values in a tile. 
+# #Calculates mean and std dev of pixel values in a tile. 
 # def find_mean_std_pixel_value(img_list):
     
 #     avg_pixel_value = []
