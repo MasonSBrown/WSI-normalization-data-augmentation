@@ -44,7 +44,7 @@ def norm_HnE(img, Io=240, alpha=1, beta=0.15):
     maxCRef = np.array([1.9705, 1.0308])
     
     # extract the height, width and num of channels of image
-    h, w, c = img.shape
+    h, w, c = img.shape 
     
     # reshape image to multiple rows and 3 columns.
     #Num of rows depends on the image size (wxh)
